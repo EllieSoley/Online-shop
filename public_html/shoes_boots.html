@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <title>Online shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="online%20shop.css" type="text/css"/>
+    <link rel="stylesheet" href="shop_items.css" type="text/css"/>
+    <script src="Javascript.js"></script>
+
+    <body class="content" style="max-width:1200px;">
+
+        <!-- Sidebar/menu -->
+
+        <nav class="sidebar bar-block white collapse top" style="z-index:3;width:250px;" id="mySidebar">
+            <div class="container display-container padding-16"> <!--the same padding as for the top panel-->
+                <i onclick="closeNavBar()" class="fa fa-remove hide-large button display-topright"></i> 
+                <h3 class="wide">
+                    <b>LOCO</b>
+                </h3>
+            </div>
+
+            <div class="padding-64 large text-grey" style="font-weight:bold">
+
+                <a onclick ="myAccFunc('accShirts')" href="#" class="button block white left-align caret-down" id="btnShirts">Shirts
+
+                </a>
+
+                <!--java script function options -shirts -->
+
+                <div id="accShirts" class="bar-block hide padding-large medium">
+                    <a href="classical_shirts.html" class="bar-item button"> 
+                        Classical
+                    </a>
+                    <a href="long-sleeve_shirts.html" class="bar-item button">Long-sleeve</a>
+                    <a href="short-sleeve-shirts.html" class="bar-item button">Short-sleeve</a>
+                </div> 
+                <!--Invisible accordion end -->
+
+                <a onclick="myAccFunc('accDresses')" href="#" class="button block white left-align caret-down" id="btnDresses">Dresses
+
+                </a>
+                <div id="accDresses" class="bar-block hide padding-large medium">
+                    <a href="classical dresses.html" class="bar-item button">
+                        Classical
+                    </a>
+                    <a href="long_dresses.html" class="bar-item button">Long</a>
+                    <a href="short_dresses.html" class="bar-item button">Short</a>
+                </div>
+
+                <a onclick="myAccFunc('demoAcc')" href="#" class="button block white left-align" id="myBtn">
+                    Jeans <i class="fa fa-caret-down"></i>
+                </a>
+
+                <!--java script function options -jeans -->
+
+                <div id="demoAcc" class="bar-block hide padding-large medium">
+                    <a href="jeans_skinny.html" class="bar-item button">
+                        Skinny
+                    </a>
+                    <a href="jeans_relaxed.html" class="bar-item button">Relaxed</a>
+                    <a href="jeans_straight.html" class="bar-item button">Straight</a>
+                </div>
+                <!-- -->
+
+                <a onclick="myAccFunc('accJackets')" href="#" class="button block white left-align caret-down" id="btnJackets">Jackets</a>
+                <div id="accJackets" class="bar-block hide padding-large medium">
+                    <a href ="jackets_biker.html" class="bar-item button">
+                        Biker
+                    </a>
+                    <a href="jackets_denim.html" class="bar-item button">Denim jackets</a>
+                    <a href="jackets_classical.html" class="bar-item button">Classical jackets</a>
+                </div>
+
+                <a onclick="myAccFunc('accGymwear')" href="#" class="button block white left-align caret-down" id="btnGymwear">Gymwear
+
+                </a>
+                <div id="accGymwear" class="bar-block hide padding-large medium">
+                    <a href="gymwear_tops.html" class="bar-item button">
+                        Tops 
+                    </a>
+                    <a href="gymwear_leggins.html" class="bar-item button">Leggins</a>
+                    <a href="gymwear_trainers.html" class="bar-item button">Trainers</a>
+                </div>
+
+                <a onclick ="myAccFunc('accAcs')" href="#" class="button block white left-align caret-down" id="btnAcs">Accessories
+
+                </a>
+                <div id="accAcs" class="bar-block hide padding-large medium">
+                    <a href="accessories_bags.html" class="bar-item button">
+                        Bags
+                    </a>
+                    <a href="accessories_earrings.html" class="bar-item button">Earrings</a>
+                    <a href="accessories_hats.html" class="bar-item button">Hats</a>
+                </div>
+                <a onclick="myAccFunc('accShoes')" href="#" class="button block white left-align caret-down" id="btnShoes">Shoes
+
+                </a>
+                <div id="accShoes" class="bar-block show padding-large medium">
+                    <a href="shoes_sandals.html" class="bar-item button">
+                        Sandals
+                    </a>
+                    <a href="shoes_flats.html" class="bar-item button">Flats</a>
+                    <a href="shoes_boots.html" class="bar-item button light-grey">Boots</a>
+                </div>
+            </div>
+
+            <a href="main_page.html" class="bar-item button padding">Home page</a>
+            <a href="main_page.html#contact " class="bar-item button padding">Contact</a> 
+            <a href="#" class="bar-item button padding left-align" onclick="document.getElementById('newsletter').style.display = 'block'">Newsletter</a> 
+        </nav>
+
+        <!-- Top menu on small screens -->
+        <header class="top hide-large black xlarge">
+            <div class="bar-item padding-24 wide">LOCO</div>
+            <span onclick="openNavBar()" class="button padding-24 right" style='padding: 8px 16px;'>
+                <i class="fa fa-bars"></i>
+            </span> 
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="overlay hide-large" onclick="closeNavBar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+        <!-- !PAGE CONTENT! -->
+        <div class="main">
+
+            <!-- Push down content on small screens -->
+            <div class="hide-large" style="margin-top:83px"></div>
+
+            <!-- Top header -->
+            <header class="container xlarge">
+                <p class="left">Female collection</p>
+                <br>
+                <br>
+                <p class="left center"><b>Shoes. Boots</b></p>
+                <p class="right">
+                    <i class="fa fa-shopping-cart margin-right hover-opacity pointer"></i>
+                    <i class="fa fa-search hover-opacity pointer"></i>
+                </p>
+            </header>
+
+            <!-- Photo Grid -->
+            <!--<div class="row" id="myGrid">-->
+
+            <div class="container">
+
+                <div class="gallery">
+                    <figure class="gallery-item1 image-block margin-bottom-3em">
+                        <img src="photos/shoes/boots/1.jpg" class="gallery-img zoom" alt="boots1"> 
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <p>Little lady collection<br><b>$32</b></p>
+                    </figure>
+                    <figure class="gallery-item2 image-block margin-bottom-3em">
+
+                        <img src="photos/shoes/boots/2.jpg" class="gallery-img zoom" alt="boots2">
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <div class="display-container">
+                            <span class="tag display-bottomleft">New</span>
+                        </div> 
+                        <p>Little lady collection<br><b>$30</b></p>
+                    </figure>
+
+
+                    <figure class=" gallery-item3 image-block margin-bottom-3em">
+                        <img src="photos/shoes/boots/3.jpg" class="gallery-img zoom" alt="boots3">
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <p>Classical collection<br><b>$38</b></p>
+                    </figure>
+
+                    <figure class="gallery-item4 image-block margin-bottom-3em">
+                        <img src="photos/shoes/boots/4.jpg" class="gallery-img zoom" alt="boots4">
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <p>Classical collection<br><b>$35</b></p>
+                    </figure>
+                    <figure class="gallery-item5 image-block margin-bottom-7em">     
+                        <img src="photos/shoes/boots/5.jpg" class="gallery-img zoom" alt="boots5">
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <div class="display-container">
+                            <span class="tag display-bottomleft">Exclusive</span>
+                        </div>
+                        <p>Classical collection<br><b>$38</b></p>    
+                    </figure>
+                    <figure class="gallery-item6 image-block margin-bottom-7em">
+                        <img src="photos/shoes/boots/6.jpg" class="gallery-img zoom" alt="boots6">
+                        <div class="overlay">
+                            <button class="button black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                        </div>
+                        <p>Classical collection<br><b>$27</b></p>
+
+                    </figure>
+                    <div>
+                    </div>
+                </div>
+
+            </div>   
+            <!-- Footer -->
+            <footer class="padding-64 small center light-grey-footer" id="footer">
+                <div class="row-padding">
+                    <div class="col s3">
+                        <h4>Store</h4>
+                        <p class="hover-opacity medium"><i class="fa fa-fw fa-map-marker xlarge"></i> LOCO style.<br> Barcelona, Spain</p>
+                        <p class="hover-opacity medium"><i class="fa fa-fw fa-phone xlarge"></i> 00347239237</p>
+                        <p class="hover-opacity medium"><i class="fa fa-fw fa-envelope xlarge"></i> loco_style@gmail.com</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col s8">
+                        <i class="fa fa-facebook-official hover-opacity xlarge pointer padding-right"></i>
+                        <i class="fa fa-instagram hover-opacity xlarge pointer padding-right"></i>
+                        <i class="fa fa-twitter hover-opacity xlarge pointer padding-right"></i>
+                        <i class="fa fa-linkedin hover-opacity xlarge pointer padding-right"></i>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="right-align black padding-24 hover-text-green ">
+            <a href="https://www.linkedin.com/in/alyona-iablokova-623ab762/"
+               target="_blank" class="text-decoration-off">by Alionie</a> &hearts;
+        </div>
+        <!-- Newsletter Modal -->
+        <div id="newsletter" class="modal">
+            <div class="modal-content animate-zoom" style="padding:32px;">
+                <div class="container white center">
+                    <i onclick="document.getElementById('newsletter').style.display = 'none'" class="fa fa-remove right button xxlarge"></i>
+                    <h2 class="wide">NEWSLETTER</h2>
+                    <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+                    <p><input class="input border" type="text" placeholder="Enter e-mail"></p>
+                    <button type="button" class="styled-button submit-button padding-large margin-bottom" onclick="document.getElementById('newsletter').style.display = 'none'">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
